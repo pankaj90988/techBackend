@@ -14,6 +14,7 @@ var corsOptions = {
   optionsSuccessStatus: 200
 }
 
+//addingh api end points and route
 const authRoute = require("./router/auth-router");
 const contactRoute = require('./router/contact-router');
 const serviceRoute = require("./router/service-router");

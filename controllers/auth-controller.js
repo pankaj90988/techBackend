@@ -15,9 +15,6 @@ const home = async (req, res) => {
 //2 Registration //
 const register = async (req, res) => {
   try {
-    console.log(req.body);
-    console.log("hello i am in register");
-
     const { username, email, phone, password } = req.body;
     const userExist = await User.findOne({ email });
     if (userExist) {
@@ -54,7 +51,6 @@ const login = async (req, res) => {
   try {
     const { email, password } = req.body;
     const userExist = await User.findOne({ email });
-    console.log(userExist);
 
     if (!userExist) {
       res.status(400).json({ message: "Invalid Credential" });
